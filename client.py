@@ -1,6 +1,5 @@
 import eventlet
 import socketio
-import RPi.GPIO as GPIO
 import struct
 from time import sleep
 
