@@ -12,7 +12,7 @@ def connect():
 
 
 @sio.on('pot0_value')
-def response(pot0)
+def response(pot0):
     print('pot0: ', pot0)
     
     
