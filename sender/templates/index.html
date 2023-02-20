@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js" integrity="sha512-aMGMvNYu8Ue4G+fHa359jcPb1u+ytAF+P2SCb+PxrjCdO3n3ZTxJ30zuH39rimUggmTwmh2u7wvQsDTHESnmfQ==" crossorigin="anonymous"></script>
+    <script>
+      var socket = io.connect('http://172.20.10.10:5000');
+      socket.on('pot0_value', function (pot0) {
+        document.getElementById("pot0_value").innerHTML = pot0;
+
+      });
+      
+      socket.on('pot1_value', function (pot1) {
+        document.getElementById("pot1_value").innerHTML = pot1;
+
+      });
+      
+    </script>
+  </head>
+  <h1>
+    Potentiometer Value 0: <span id="pot0_value"></span>
+  </h1>
+  <h1>
+    Potentiometer Value 1: <span id="pot1_value"></span>
+  </h1>
+</html>
